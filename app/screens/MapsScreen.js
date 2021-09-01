@@ -1,20 +1,24 @@
-import React  from 'react';
-import { View,Text,StyleSheet } from 'react-native';
-
-export default function Map(){
+import React from 'react'
+import {
+    GoogleMap,
+    withScriptjs,
+    withGoogleMap
+} from 'react-google-maps'
+//-0.2412458217748353, -78.52975291189183
+const Map =(props)=>{
     return(
-        <View style={styles.body} >
-            <Text>
-            
-            </Text>
+        <GoogleMap
+        defaultZoom={10}
+        defaultCenter={{lat:-0.2412458217748353, lng:-78.52975291189183}}
+        >
 
-        </View>
+        </GoogleMap>
+
     );
 }
-const styles = StyleSheet.create({
-    body:{
-        flex:1,
-        alignItems:'center'
-    }
-});
 
+export default withScriptjs(
+    withGoogleMap(
+        Map
+    )
+);

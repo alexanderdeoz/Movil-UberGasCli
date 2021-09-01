@@ -22,7 +22,7 @@ export default function LoginScreen(props){
 
     return(
         <View style={[mainStyles.container, {padding: 50}]}>
-            <StatusBar  translucent={true}/>
+       
             <View style={loginStyles.logo}>
                 <Image source={require('../recursos/images/gas.png')}
                 style={{ height:200, width:300}}/>    
