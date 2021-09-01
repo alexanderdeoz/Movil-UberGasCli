@@ -3,8 +3,8 @@ import {
     Text,
     TouchableOpacity,
 } from 'react-native'
-import { mainStyles } from '@styles/styles'
-import color from '@styles/colors'
+import { mainStyles } from '../styles/styles'
+import color from '../styles/colors'
 
 function MyButton(props) {
 

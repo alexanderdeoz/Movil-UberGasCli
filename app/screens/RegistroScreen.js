@@ -6,10 +6,10 @@ import {
     StatusBar,
     ScrollView
 } from 'react-native'
-import { mainStyles, registroStyles } from '@styles/styles'
-import MyTextInput from '@components/MyTextInput'
-import ToolBar from '@components/ToolBar'
-import color from '@styles/colors'
+import { mainStyles, registroStyles } from '../styles/styles'
+import MyTextInput from '../components/MyTextInput'
+import ToolBar from '../components/ToolBar'
+import color from '../styles/colors'
 import {  SocialIcon, Button } from 'react-native-elements'
 
 function goToScreen(props, routeName) {
@@ -28,7 +28,7 @@ export default function RegistroScreen(props) {
             <StatusBar backgroundColor={color.BLUE} translucent={true} />
             <ToolBar titulo='Registrarse'
                 onPressLeft={() => goToScreen(props, 'Login')}
-                iconLeft={require('@recursos/images/back.png')} />
+                 />
             <View style={[mainStyles.container, { padding: 50 }]}>
                 <Text style={mainStyles.titleText}> Crea tu Cuenta</Text>
                 <MyTextInput placeholder='Nombres' image='user' />

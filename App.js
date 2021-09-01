@@ -1,6 +1,6 @@
 import React from 'react'
-import AppNavigation from '@navigation/AppNavigation'
-import { UsuarioProvider } from '@context/UsuarioContext'
+import AppNavigation from './app/navigation/AppNavigation'
+import { UsuarioProvider } from './app/context/UsuarioContext'
 
 function App(){
   return (

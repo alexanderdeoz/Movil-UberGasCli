@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from 'react'
-import { Text, View, TouchableOpacity, StatusBar, Alert, BackHandler } from 'react-native'
-import { mainStyles } from '@styles/styles'
-import color from '@styles/colors'
-import MyButton from '@components/MyButton'
-import { UsuarioContext } from '@context/UsuarioContext'
+import React, { useContext, useEffect } from 'react';
+import { Text, View, TouchableOpacity, StatusBar, Alert, BackHandler } from 'react-native';
+import color from '../styles/colors';
+import MyButton from '../components/MyButton';
+import { UsuarioContext } from '../context/UsuarioContext';
+
 
 function useBackButton(handler){
      useEffect(()=> {
@@ -22,20 +22,33 @@ export default function PrincipalScreen(props) {
     const [login, loginAction] = useContext(UsuarioContext)
 
     return (
-        <View style={{flex:1, alignItems:'center'}}>
+    <React.Fragment>
+            <View style={{flex:1, alignItems:'center'}}>
             <StatusBar
                 backgroundColor={color.BLUE}
                 barStyle='dark-content'
                 translucent={true}
             />
-            <Text style={{ textAlign: 'center', fontSize:30, marginTop: 200, 
-            fontFamily: 'Poppins-Bold' }}>Bienvenido{'\n' + login.usuario.email}</Text>
-            <MyButton
+              <MyButton
                 titulo='Cerrar Sesión'
                 onPress={()=> desconectarse()}
             />
+        
+            <Text style={{ textAlign: 'center', fontSize:20, marginTop: 0, 
+            fontFamily: 'Poppins-Bold' }}>Bienvenido{ login.usuario.email}</Text>
+          
         </View>
+        <View>
+            <Text>asdasddsfsfsdfsdfsfd</Text>
+        </View>
+    </React.Fragment>
     )
+
+    const Map =(props)=>{
+        return(
+            <Text>hola</Text>
+        );
+    }
 
     function goToScreen(routeName){
         props.navigation.navigate(routeName)

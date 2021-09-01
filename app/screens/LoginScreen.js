@@ -6,11 +6,11 @@ import {
     StatusBar,
     Image
 } from 'react-native'
-import { mainStyles, loginStyles } from '@styles/styles'
-import MyTextInput from '@components/MyTextInput'
-import MyButton from '@components/MyButton'
-import color from '@styles/colors'
-import { UsuarioContext } from '@context/UsuarioContext'
+import { mainStyles, loginStyles } from '../styles/styles'
+import MyTextInput from '../components/MyTextInput'
+import MyButton from '../components/MyButton'
+import color from '../styles/styles'
+import { UsuarioContext } from '../context/UsuarioContext'
 
 export default function LoginScreen(props){
 
@@ -22,10 +22,10 @@ export default function LoginScreen(props){
 
     return(
         <View style={[mainStyles.container, {padding: 50}]}>
-            <StatusBar backgroundColor={color.BLUE} translucent={true}/>
+            <StatusBar  translucent={true}/>
             <View style={loginStyles.logo}>
-                <Image source={require('@recursos/images/gas.png')}
-                style={{ height:250, width:250}}/>    
+                <Image source={require('../recursos/images/gas.png')}
+                style={{ height:200, width:300}}/>    
             </View>
             <MyTextInput keyboardType='email-address' placeholder='E-mail' image='user'
             value={email} onChangeText={(email)=> setEmail(email)}/>

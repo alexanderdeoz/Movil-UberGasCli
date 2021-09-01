@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react'
-import { saveUsuario, deleteUsuario } from '@storage/UsuarioAsyncStorage'
+import { saveUsuario, deleteUsuario } from '../storage/UsuarioAsyncStorage'
 import Snackbar from 'react-native-snackbar'
 
 const initialState = {

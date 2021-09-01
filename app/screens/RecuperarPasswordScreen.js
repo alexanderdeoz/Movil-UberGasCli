@@ -6,10 +6,10 @@ import {
     StatusBar,
     ScrollView
 } from 'react-native'
-import { mainStyles } from '@styles/styles'
-import MyTextInput from '@components/MyTextInput'
-import ToolBar from '@components/ToolBar'
-import color from '@styles/colors'
+import { mainStyles } from '../styles/styles'
+import MyTextInput from '../components/MyTextInput'
+import ToolBar from '../components/ToolBar'
+import color from '../styles/colors'
 
 function goToScreen(props, routeName){
     props.navigation.navigate(routeName)
@@ -25,7 +25,7 @@ export default function RecuperarPasswordScreen(props){
             <StatusBar backgroundColor={color.BLUE} translucent={true}/>
             <ToolBar titulo='Contraseña'
             onPressLeft={()=> goToScreen(props, 'Login')}
-            iconLeft={require('@recursos/images/back.png')}/>
+            />
             <View style={[mainStyles.container, {padding: 50}]}>
             <Text style={mainStyles.titleText}> Recuperar{'\n'}Contraseña</Text>
             <MyTextInput keyboardType='email-address' placeholder='E-mail' image='user'/>

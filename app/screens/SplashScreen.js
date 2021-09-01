@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import { View, StatusBar } from 'react-native'
 import * as Animatable from 'react-native-animatable'
-import { splashStyles } from '@styles/styles'
-import { getUsuario } from '@storage/UsuarioAsyncStorage'
-import { UsuarioContext } from '@context/UsuarioContext'
+import { splashStyles } from '../styles/styles'
+import { getUsuario } from '../storage/UsuarioAsyncStorage'
+import { UsuarioContext } from '../context/UsuarioContext'
 
 export default function SplashScreen(props) {
 
@@ -25,7 +25,7 @@ export default function SplashScreen(props) {
                     height: 200,
                     margin: 100,
                 }}
-                source={require('@recursos/images/gas.png')}
+                source={require('../recursos/images/gas.png')}
             />
         </View>
     )
